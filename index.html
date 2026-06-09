@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mardima Jewelry - Premium Exclusive</title>
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #fdf6f0;
+            --text-dark: #5c4a37;
+            --gold: #bc9c6e;
+            --gold-light: #f5e6d9;
+            --gold-gradient: linear-gradient(135deg, #dfc39a 0%, #bc9c6e 50%, #8a6f48 100%);
+            --border-soft: rgba(188, 156, 110, 0.25);
+            --luxury-shadow: 0 15px 35px rgba(110, 90, 68, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Naqshli Watercolor Orqa Fon */
+        .floral-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.35;
+        }
+
+        .floral-corner {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .top-left { top: 0; left: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M0,0 Q30,20 40,60 T10,100' fill='none' stroke='%23bc9c6e' stroke-width='0.5'/%3E%3Ccircle cx='40' cy='60' r='1.5' fill='%23bc9c6e'/%3E%3Ccircle cx='10' cy='100' r='1' fill='%23bc9c6e'/%3E%3C/svg%3E"); }
+        .top-right { top: 0; right: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M100,0 Q70,20 60,60 T90,100' fill='none' stroke='%23bc9c6e' stroke-width='0.5'/%3E%3Ccircle cx='60' cy='60' r='1.5' fill='%23bc9c6e'/%3E%3C/svg%3E"); transform: scaleX(-1); }
+
+        /* Asosiy Konteyner */
+        .wrapper {
+            width: 100%;
+            max-width: 480px;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* VIP Konsultatsiya Banneri */
+        .vip-banner {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid var(--border-soft);
+            padding: 12px 20px;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--luxury-shadow);
+        }
+
+        .vip-btn {
+            background: var(--gold-gradient);
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(188, 156, 110, 0.4);
+        }
+
+        .vip-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(188, 156, 110, 0.6);
+        }
+
+        /* Brend Logotipi va Sarlavha */
+        .brand-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .logo-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px auto;
+            background: #fff;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--luxury-shadow);
+            position: relative;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        .logo-container i {
+            font-size: 3rem;
+            color: var(--gold);
+            transition: transform 0.5s ease;
+        }
+
+        .logo-container:hover i {
+            transform: rotate(360deg) scale(1.1);
+        }
+
+        .brand-name {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            letter-spacing: 6px;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
+
+        .brand-sub {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            letter-spacing: 8px;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .slogan {
+            font-size: 1.1rem;
+            font-style: italic;
+            font-weight: 400;
+            color: var(--text-dark);
+            opacity: 0.95;
+        }
+
+        /* Ijtimoiy Tarmoq Tugmalari */
+        .buttons-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 40px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 18px 25px;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid var(--border-soft);
+            border-radius: 15px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 12 rgba(0,0,0,0.02);
+        }
+
+        .link-card:hover {
+            transform: translateY(-3px);
+            background: #fff;
+            border-color: var(--gold);
+            box-shadow: 0 10px 25px rgba(188, 156, 110, 0.2);
+        }
+
+        .link-card i {
+            font-size: 1.3rem;
+            color: var(--gold);
+        }
+
+        .link-arrow {
+            font-size: 0.8rem !important;
+            opacity: 0.6;
+        }
+
+        /* 💎 "Eksklyuziv To'plamlar" bo'limi */
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            color: var(--text-dark);
+            position: relative;
+            text-align: center;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 1px;
+            background: var(--gold);
+            margin: 10px auto 0 auto;
+        }
+
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .collection-card {
+            background: #fff;
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 8px;
+            text-align: center;
+            box-shadow: var(--luxury-shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .collection-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 12px 30px rgba(188, 156, 110, 0.25);
+        }
+
+        .collection-card img {
+            width: 100%;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .collection-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.2;
+        }
+
+        .explore-btn {
+            background: var(--gold-light);
+            color: var(--text-dark);
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .collection-card:hover .explore-btn {
+            background: var(--gold);
+            color: #fff;
+        }
+
+        /* 🔔 JONLI SAVDO TICKER-I (Live Sales Notification) */
+        .live-sales-ticker {
+            position: fixed;
+            bottom: 30px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-left: 4px solid var(--gold);
+            border-radius: 8px;
+            padding: 12px 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            max-width: 320px;
+            transform: translateY(150px);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(10px);
+        }
+
+        .live-sales-ticker.show {
+            transform: translateY(0);
+        }
+
+        .live-sales-ticker i {
+            color: var(--gold);
+            font-size: 1.3rem;
+        }
+
+        .ticker-text {
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .ticker-time {
+            font-size: 0.7rem;
+            color: #8a7a68;
+            display: block;
+            margin-top: 2px;
+        }
+
+        /* 💬 PREMIUM LIVE CONCIERGE WIDGET (Yordamchi) */
+        .concierge-widget {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            z-index: 99;
+        }
+
+        .concierge-trigger {
+            width: 55px;
+            height: 55px;
+            background: var(--gold-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-shadow: 0 8px 25px rgba(188, 156, 110, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .concierge-trigger:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        .concierge-trigger i {
+            font-size: 1.5rem;
+        }
+
+        .concierge-box {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            width: 290px;
+            background: #fff;
+            border: 1px solid var(--border-soft);
+            border-radius: 16px;
+            box-shadow: var(--luxury-shadow);
+            padding: 20px;
+            display: none;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+
+        .concierge-box.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .concierge-box h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .concierge-box p {
+            font-size: 0.8rem;
+            color: #7a6a58;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .concierge-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25d366; /* WhatsApp Green */
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* 🔔 MASLAHAT MODALI (Modal Window) */
+        .luxury-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(92, 74, 55, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 200;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .luxury-modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            background: #fdf6f0;
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--gold);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            text-align: center;
+            transform: scale(0.8);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .luxury-modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: var(--gold);
+        }
+
+        .modal-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .modal-desc {
+            font-size: 0.85rem;
+            color: #7a6a58;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .luxury-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-soft);
+            border-radius: 8px;
+            background: #fff;
+            color: var(--text-dark);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .luxury-input:focus {
+            border-color: var(--gold);
+        }
+
+        .modal-submit {
+            width: 100%;
+            background: var(--gold-gradient);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* Sparkle Effekti */
+        .sparkle {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: radial-gradient(circle, #fff 0%, rgba(188,156,110,0.8) 50%, rgba(255,255,255,0) 100%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 999;
+            animation: burst 0.8s ease-out forwards;
+        }
+
+        @keyframes burst {
+            0% { transform: scale(0.2) rotate(0deg); opacity: 1; }
+            100% { transform: scale(1.5) rotate(180deg) translateY(-20px); opacity: 0; }
+        }
+
+        /* Footer - To'liq xususiylashtirilgan mualliflik huquqi */
+        .footer {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            opacity: 0.7;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .footer p {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floral Orqa Fon bezaklari -->
+    <div class="floral-bg">
+        <div class="floral-corner top-left"></div>
+        <div class="floral-corner top-right"></div>
+    </div>
+
+    <!-- Asosiy Ekran -->
+    <div class="wrapper">
+        
+        <!-- Yuqori Maslahat Panel -->
+        <div class="vip-banner">
+            <span style="font-size: 0.8rem; font-weight: 500; letter-spacing: 0.5px;">Eksklyuziv tilla taqinchoqlar</span>
+            <button class="vip-btn" onclick="toggleModal(true, 'VIP Konsultatsiya', 'Shaxsiy zargarimiz siz bilan tez orada bog\'lanadi va eng mukammal taqinchoqni tanlashda yordam beradi.')">Konsultatsiya</button>
+        </div>
+
+        <!-- Brend Header -->
+        <header class="brand-header">
+            <div class="logo-container" onclick="sparkleEffect(event)">
+                <i class="fa-solid fa-ring"></i>
+            </div>
+            <h1 class="brand-name">Mardima</h1>
+            <div class="brand-sub">Jewelry</div>
+            <p class="slogan">Siz eng yaxshisiga loyiqsiz !</p>
+        </header>
+
+        <!-- Aloqa tugmalari -->
+        <div class="buttons-group">
+            <a href="https://t.me/Mardima_Jewelry" class="link-card" target="_blank">
+                <span><i class="fa-paper-plane" style="margin-right: 15px;"></i> Telegram</span>
+                <i class="fa-solid fa-chevron-right link-arrow"></i>
+            </a>
+
+            <a href="https://instagram.com/Mardima_Jawelry" class="link-card" target="_blank">
+                <span><i class="fa-brands fa-instagram" style="margin-right: 15px;"></i> Instagram</span>
+                <i class="fa-solid fa-chevron-right link-arrow"></i>
+            </a>
+
+            <a href="https://t.me/Mardima_Jewelry_Admin" class="link-card" target="_blank">
+                <span><i class="fa-solid fa-user-shield" style="margin-right: 15px;"></i> Admin bilan Aloqa</span>
+                <i class="fa-solid fa-chevron-right link-arrow"></i>
+            </a>
+        </div>
+
+        <!-- Maxsus to'plamlar -->
+        <h3 class="section-title">Special Collections</h3>
+        <div class="collections-grid">
+            
+            <!-- Collection 1 -->
+            <div class="collection-card" onclick="toggleModal(true, 'Bridal Collection', 'Ushbu to\'plam sevgi va sadoqat ramzi bo\'lgan eng nozik brilliant uzuklarni o\'z ichiga oladi. Biz bilan bog\'lanib narxlarini bilib oling.')">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=300&q=80" alt="Bridal Ring">
+                <div class="collection-title">Bridal Collection</div>
+                <button class="explore-btn">Explore</button>
+            </div>
+
+            <!-- Collection 2 -->
+            <div class="collection-card" onclick="toggleModal(true, 'Diamond Classics', 'Siz uchun har kuni porlab turadigan klassik va zamonaviy brilliant sirg\'alar va marjonlar to\'plami.')">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=300&q=80" alt="Diamond Classics">
+                <div class="collection-title">Diamond Classics</div>
+                <button class="explore-btn">Explore</button>
+            </div>
+
+            <!-- Collection 3 -->
+            <div class="collection-card" onclick="toggleModal(true, 'Gold Essentials', 'Sof tilladan ishlangan va har bir ko\'rinishingizga yuqori nafosat bag\'ishlovchi bilakuzuklar.')">
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=300&q=80" alt="Gold Essentials">
+                <div class="collection-title">Gold Essentials</div>
+                <button class="explore-btn">Explore</button>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Mardima Jewelry. Barcha huquqlar himoyalangan.</p>
+        </footer>
+
+    </div>
+
+    <!-- 🔔 JONLI SAVDO TICKER-I (Live Conversion Popups) -->
+    <div class="live-sales-ticker" id="live-sales">
+        <i class="fa-solid fa-gem"></i>
+        <div class="ticker-text">
+            <span id="ticker-message">Kimdir mahsulot sotib oldi!</span>
+            <span class="ticker-time" id="ticker-time">Hozirgina</span>
+        </div>
+    </div>
+
+    <!-- 💬 PREMIUM LIVE CONCIERGE WIDGET -->
+    <div class="concierge-widget">
+        <div class="concierge-trigger" onclick="toggleConcierge()">
+            <i class="fa-solid fa-comment-dots"></i>
+        </div>
+        <div class="concierge-box" id="concierge-box">
+            <h4>Mardima Concierge</h4>
+            <p>Salom! Bugun siz uchun munosib bo'lgan eng mukammal va dabdabali tilla taqinchoqni tanlashda yordam berishga tayyorman. Men bilan suhbatni boshlang:</p>
+            <a href="https://t.me/yashirin_link" class="concierge-btn" target="_blank">
+                <i class="fa-brands fa-telegram"></i> Telegram Chat
+            </a>
+        </div>
+    </div>
+
+    <!-- 🔔 UNIVERSAL PREMIUM MODAL (Interactive) -->
+    <div class="luxury-modal" id="luxury-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="toggleModal(false)">&times;</span>
+            <h3 class="modal-title" id="m-title">Premium Collection</h3>
+            <p class="modal-desc" id="m-desc">Eksklyuziv kolleksiyamiz haqida batafsil ma'lumot.</p>
+            
+            <form onsubmit="handleFormSubmit(event)">
+                <input type="text" placeholder="Ismingiz" class="luxury-input" required>
+                <input type="tel" placeholder="Telefon raqamingiz (+998...)" class="luxury-input" required>
+                <button type="submit" class="modal-submit">Buyurtma berish / So'rov jo'natish</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Interaktiv Ssenariylar (JS) -->
+    <script>
+        // Sparkle yulduzcha effekti logotip bosilganda
+        function sparkleEffect(e) {
+            for (let i = 0; i < 8; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.classList.add('sparkle');
+                
+                // Tasodifiy burchaklar bo'yicha tarqalish
+                const angle = Math.random() * Math.PI * 2;
+                const distance = 30 + Math.random() * 50;
+                
+                sparkle.style.left = (e.clientX + Math.cos(angle) * distance) + 'px';
+                sparkle.style.top = (e.clientY + Math.sin(angle) * distance) + 'px';
+                
+                document.body.appendChild(sparkle);
+                
+                setTimeout(() => {
+                    sparkle.remove();
+                }, 800);
+            }
+        }
+
+        // Modalni boshqarish
+        function toggleModal(show, title = '', desc = '') {
+            const modal = document.getElementById('luxury-modal');
+            if (show) {
+                document.getElementById('m-title').innerText = title;
+                document.getElementById('m-desc').innerText = desc;
+                modal.classList.add('active');
+            } else {
+                modal.classList.remove('active');
+            }
+        }
+
+        // Konsiyerj (Yordamchi) oynasini yoqish/o'chirish
+        function toggleConcierge() {
+            const box = document.getElementById('concierge-box');
+            box.classList.toggle('active');
+        }
+
+        // Formani topshirish (Sotuv simulyatsiyasi)
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert("Muvaffaqiyatli qabul qilindi! Menejerimiz tez orada siz bilan bog'lanadi.");
+            toggleModal(false);
+        }
+
+        // JONLI SAVDO TICKER-I (Live Sales notifications - FOMO yaratish)
+        const buyurtmalar = [
+            "Toshkentdan Guli 'Bridal Ring' uchun buyurtma berdi!",
+            "Xorazmdan Laylo 'Diamond Classics' to'plamini tanladi!",
+            "Samarqanddan Dilnoza 'Gold Essentials' bilakuzugini sotib oldi!",
+            "Farg'onadan Nigora shaxsiy konsultatsiyadan o'tdi!",
+            "Buxorodan Madina 'Special Bridal Ring' uchun zaxira qildi!"
+        ];
+
+        const vaqtlar = [
+            "Hozirgina",
+            "1 daqiqa oldin",
+            "3 daqiqa oldin",
+            "Hozirgina",
+            "5 daqiqa oldin"
+        ];
+
+        function showLiveSales() {
+            const ticker = document.getElementById('live-sales');
+            const messageEl = document.getElementById('ticker-message');
+            const timeEl = document.getElementById('ticker-time');
+
+            // Tasodifiy xabar tanlash
+            const index = Math.floor(Math.random() * buyurtmalar.length);
+            messageEl.innerText = buyurtmalar[index];
+            timeEl.innerText = vaqtlar[index];
+
+            // Ko'rsatish
+            ticker.classList.add('show');
+
+            // 5 soniyadan keyin yashirish
+            setTimeout(() => {
+                ticker.classList.remove('show');
+            }, 5000);
+        }
+
+        // Har 15 soniyada yangi jonli savdo xabarini chiqarish
+        setInterval(showLiveSales, 15000);
+
+        // Birinchi marta 4 soniyadan keyin ishga tushadi
+        setTimeout(showLiveSales, 4000);
+    </script>
+</body>
+</html>
